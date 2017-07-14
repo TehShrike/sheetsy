@@ -1,0 +1,27 @@
+{
+  "name": "sheetsy",
+  "version": "1.0.0",
+  "description": "Use your Google Sheets as a data source in the browser.  Like tabletop.js but simpler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TehShrike/sheetsy.git"
+  },
+  "keywords": [
+    "google",
+    "sheets",
+    "spreadsheet",
+    "sheet",
+    "tabletop",
+    "browser"
+  ],
+  "author": "TehShrike",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/TehShrike/sheetsy/issues"
+  },
+  "homepage": "https://github.com/TehShrike/sheetsy#readme"
+}
