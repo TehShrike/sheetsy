@@ -1,8 +1,9 @@
 const tape = require('tape')
 const { getSheetsList } = require('../index.js')
 const testCases = require('./cases.js')
+const getKeyFromUrl = url => url.match(/worksheets\/([^\/]+)\/public/)[1]
 
-const testGet = key => Promise.resolve(require(`./fixture-${key}.json`))
+const testGet = url => Promise.resolve(require(`./fixture-${getKeyFromUrl(url)}.json`))
 
 testCases.forEach(testCase => {
 	tape(`getting sheets - ${testCase.name}`, t => {

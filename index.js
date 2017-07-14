@@ -1,9 +1,10 @@
+const { buildIndexUrl, buildSheetUrl } = require('./url-builder.js')
 const defaultGet = require('./get.js')
 
 const afterLastSlash = str => str.split('/').pop()
 
 function getSheetsList(key, get = defaultGet) {
-	return get(key).then(data => {
+	return get(buildIndexUrl(key)).then(data => {
 		return data.feed.entry.map(sheetData => {
 			const lastSheetUrl = sheetData.link.find(link => link.rel === 'self').href
 			return {
