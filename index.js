@@ -13,7 +13,7 @@ const toss = message => {
 	throw new Error(message)
 }
 
-function getSheetsList(key, get = defaultGet) {
+function getSheetList(key, get = defaultGet) {
 	return get(buildIndexUrl(key)).then(data => {
 		return data.feed.entry.map(sheetData => {
 			const lastSheetUrl = sheetData.link.find(link => link.rel === 'self').href
@@ -57,7 +57,7 @@ function parseUrl(url) {
 
 
 module.exports = {
-	getSheetsList,
+	getSheetList,
 	getSheet,
 	parseUrl
 }
