@@ -4,7 +4,7 @@
   "description": "Use your Google Sheets as a data source in the browser.  Like tabletop.js but simpler.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/test-*.js"
+    "test": "tape test/test-with-fixtures.js"
   },
   "repository": {
     "type": "git",

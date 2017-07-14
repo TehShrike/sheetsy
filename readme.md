@@ -107,7 +107,7 @@ Your browser bundler will need to respect the `browser` field in `package.json`.
 
 # Possible additions
 
-If you find yourself needing these, open an issue with full details, or a pull request with tests.
+If you find yourself needing these, open an issue with full details about your use case, or a pull request with tests.
 
 - Return some other metadata with the document/sheets, such as author or last updated time
 - Handle private sheets
