@@ -1,0 +1,120 @@
+{
+	"version": "1.0",
+	"encoding": "UTF-8",
+	"feed": {
+		"xmlns": "http://www.w3.org/2005/Atom",
+		"xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+		"xmlns$gs": "http://schemas.google.com/spreadsheets/2006",
+		"id": {
+			"$t": "https://spreadsheets.google.com/feeds/worksheets/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/public/basic"
+		},
+		"updated": {
+			"$t": "2015-04-07T04:45:51.207Z"
+		},
+		"category": [
+			{
+				"scheme": "http://schemas.google.com/spreadsheets/2006",
+				"term": "http://schemas.google.com/spreadsheets/2006#worksheet"
+			}
+		],
+		"title": {
+			"type": "text",
+			"$t": "Foods for Tabletop sample"
+		},
+		"link": [
+			{
+				"rel": "alternate",
+				"type": "application/atom+xml",
+				"href": "https://docs.google.com/spreadsheets/d/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/pubhtml"
+			},
+			{
+				"rel": "http://schemas.google.com/g/2005#feed",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/worksheets/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/public/basic"
+			},
+			{
+				"rel": "http://schemas.google.com/g/2005#post",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/worksheets/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/public/basic"
+			},
+			{
+				"rel": "self",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/worksheets/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/public/basic?alt=json"
+			}
+		],
+		"author": [
+			{
+				"name": {
+					"$t": "jonathan.soma"
+				},
+				"email": {
+					"$t": "jonathan.soma@gmail.com"
+				}
+			}
+		],
+		"openSearch$totalResults": {
+			"$t": "1"
+		},
+		"openSearch$startIndex": {
+			"$t": "1"
+		},
+		"entry": [
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/worksheets/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/public/basic/od6"
+				},
+				"updated": {
+					"$t": "2015-04-07T04:45:51.207Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#worksheet"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "Sheet1"
+				},
+				"content": {
+					"type": "text",
+					"$t": "Sheet1"
+				},
+				"link": [
+					{
+						"rel": "http://schemas.google.com/spreadsheets/2006#listfeed",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/basic"
+					},
+					{
+						"rel": "http://schemas.google.com/spreadsheets/2006#cellsfeed",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/cells/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/basic"
+					},
+					{
+						"rel": "http://schemas.google.com/visualization/2008#visualizationApi",
+						"type": "application/atom+xml",
+						"href": "https://docs.google.com/spreadsheets/d/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/gviz/tq?gid=0&pub=1"
+					},
+					{
+						"rel": "http://schemas.google.com/spreadsheets/2006#exportcsv",
+						"type": "text/csv",
+						"href": "https://docs.google.com/spreadsheets/d/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/export?gid=0&format=csv"
+					},
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/worksheets/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/public/basic/od6"
+					}
+				],
+				"gs$colCount": {
+					"$t": "20"
+				},
+				"gs$rowCount": {
+					"$t": "100"
+				}
+			}
+		]
+	}
+}

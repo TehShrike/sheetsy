@@ -1,0 +1,179 @@
+{
+	"version": "1.0",
+	"encoding": "UTF-8",
+	"feed": {
+		"xmlns": "http://www.w3.org/2005/Atom",
+		"xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+		"xmlns$gsx": "http://schemas.google.com/spreadsheets/2006/extended",
+		"id": {
+			"$t": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values"
+		},
+		"updated": {
+			"$t": "2015-04-07T04:45:51.207Z"
+		},
+		"category": [
+			{
+				"scheme": "http://schemas.google.com/spreadsheets/2006",
+				"term": "http://schemas.google.com/spreadsheets/2006#list"
+			}
+		],
+		"title": {
+			"type": "text",
+			"$t": "Sheet1"
+		},
+		"link": [
+			{
+				"rel": "alternate",
+				"type": "application/atom+xml",
+				"href": "https://docs.google.com/spreadsheets/d/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/pubhtml"
+			},
+			{
+				"rel": "http://schemas.google.com/g/2005#feed",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values"
+			},
+			{
+				"rel": "http://schemas.google.com/g/2005#post",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values"
+			},
+			{
+				"rel": "self",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values?alt=json"
+			}
+		],
+		"author": [
+			{
+				"name": {
+					"$t": "jonathan.soma"
+				},
+				"email": {
+					"$t": "jonathan.soma@gmail.com"
+				}
+			}
+		],
+		"openSearch$totalResults": {
+			"$t": "3"
+		},
+		"openSearch$startIndex": {
+			"$t": "1"
+		},
+		"entry": [
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values/cokwr"
+				},
+				"updated": {
+					"$t": "2015-04-07T04:45:51.207Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "Carrot"
+				},
+				"content": {
+					"type": "text",
+					"$t": "category: Vegetable, healthiness: Adequate"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values/cokwr"
+					}
+				],
+				"gsx$name": {
+					"$t": "Carrot"
+				},
+				"gsx$category": {
+					"$t": "Vegetable"
+				},
+				"gsx$healthiness": {
+					"$t": "Adequate"
+				}
+			},
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values/cpzh4"
+				},
+				"updated": {
+					"$t": "2015-04-07T04:45:51.207Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "Pork Shoulder"
+				},
+				"content": {
+					"type": "text",
+					"$t": "category: Meat, healthiness: Questionable"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values/cpzh4"
+					}
+				],
+				"gsx$name": {
+					"$t": "Pork Shoulder"
+				},
+				"gsx$category": {
+					"$t": "Meat"
+				},
+				"gsx$healthiness": {
+					"$t": "Questionable"
+				}
+			},
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values/cre1l"
+				},
+				"updated": {
+					"$t": "2015-04-07T04:45:51.207Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "Bubblegum"
+				},
+				"content": {
+					"type": "text",
+					"$t": "category: Candy, healthiness: Super High"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1XKEoNootdqppngBRDnfoj0qjrdfCGcprqegMaLsZs24/od6/public/values/cre1l"
+					}
+				],
+				"gsx$name": {
+					"$t": "Bubblegum"
+				},
+				"gsx$category": {
+					"$t": "Candy"
+				},
+				"gsx$healthiness": {
+					"$t": "Super High"
+				}
+			}
+		]
+	}
+}

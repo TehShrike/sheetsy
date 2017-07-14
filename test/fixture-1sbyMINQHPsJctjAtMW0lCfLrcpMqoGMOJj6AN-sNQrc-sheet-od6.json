@@ -1,0 +1,217 @@
+{
+	"version": "1.0",
+	"encoding": "UTF-8",
+	"feed": {
+		"xmlns": "http://www.w3.org/2005/Atom",
+		"xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+		"xmlns$gsx": "http://schemas.google.com/spreadsheets/2006/extended",
+		"id": {
+			"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values"
+		},
+		"updated": {
+			"$t": "2016-12-08T15:31:04.130Z"
+		},
+		"category": [
+			{
+				"scheme": "http://schemas.google.com/spreadsheets/2006",
+				"term": "http://schemas.google.com/spreadsheets/2006#list"
+			}
+		],
+		"title": {
+			"type": "text",
+			"$t": "books"
+		},
+		"link": [
+			{
+				"rel": "alternate",
+				"type": "application/atom+xml",
+				"href": "https://docs.google.com/spreadsheets/d/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/pubhtml"
+			},
+			{
+				"rel": "http://schemas.google.com/g/2005#feed",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values"
+			},
+			{
+				"rel": "http://schemas.google.com/g/2005#post",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values"
+			},
+			{
+				"rel": "self",
+				"type": "application/atom+xml",
+				"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values?alt=json"
+			}
+		],
+		"author": [
+			{
+				"name": {
+					"$t": "jonathan.soma"
+				},
+				"email": {
+					"$t": "jonathan.soma@gmail.com"
+				}
+			}
+		],
+		"openSearch$totalResults": {
+			"$t": "4"
+		},
+		"openSearch$startIndex": {
+			"$t": "1"
+		},
+		"entry": [
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cokwr"
+				},
+				"updated": {
+					"$t": "2016-12-08T15:31:04.130Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "The Left Hand of Darkness"
+				},
+				"content": {
+					"type": "text",
+					"$t": "author: Ursula K. Le Guin, goodreadsrating: 4.05"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cokwr"
+					}
+				],
+				"gsx$title": {
+					"$t": "The Left Hand of Darkness"
+				},
+				"gsx$author": {
+					"$t": "Ursula K. Le Guin"
+				},
+				"gsx$goodreadsrating": {
+					"$t": "4.05"
+				}
+			},
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cpzh4"
+				},
+				"updated": {
+					"$t": "2016-12-08T15:31:04.130Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "Kindred"
+				},
+				"content": {
+					"type": "text",
+					"$t": "author: Octavia Butler, goodreadsrating: 4.16"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cpzh4"
+					}
+				],
+				"gsx$title": {
+					"$t": "Kindred"
+				},
+				"gsx$author": {
+					"$t": "Octavia Butler"
+				},
+				"gsx$goodreadsrating": {
+					"$t": "4.16"
+				}
+			},
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cre1l"
+				},
+				"updated": {
+					"$t": "2016-12-08T15:31:04.130Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "The Handmaid's Tale"
+				},
+				"content": {
+					"type": "text",
+					"$t": "author: Margaret Atwood, goodreadsrating: 4.01"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cre1l"
+					}
+				],
+				"gsx$title": {
+					"$t": "The Handmaid's Tale"
+				},
+				"gsx$author": {
+					"$t": "Margaret Atwood"
+				},
+				"gsx$goodreadsrating": {
+					"$t": "4.01"
+				}
+			},
+			{
+				"id": {
+					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/chk2m"
+				},
+				"updated": {
+					"$t": "2016-12-08T15:31:04.130Z"
+				},
+				"category": [
+					{
+						"scheme": "http://schemas.google.com/spreadsheets/2006",
+						"term": "http://schemas.google.com/spreadsheets/2006#list"
+					}
+				],
+				"title": {
+					"type": "text",
+					"$t": "A Swiftly Tilting Planet"
+				},
+				"content": {
+					"type": "text",
+					"$t": "author: Madeleine L'Engle, goodreadsrating: 4.12"
+				},
+				"link": [
+					{
+						"rel": "self",
+						"type": "application/atom+xml",
+						"href": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/chk2m"
+					}
+				],
+				"gsx$title": {
+					"$t": "A Swiftly Tilting Planet"
+				},
+				"gsx$author": {
+					"$t": "Madeleine L'Engle"
+				},
+				"gsx$goodreadsrating": {
+					"$t": "4.12"
+				}
+			}
+		]
+	}
+}
