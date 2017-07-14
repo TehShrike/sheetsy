@@ -26,5 +26,11 @@
   "homepage": "https://github.com/TehShrike/sheetsy#readme",
   "devDependencies": {
     "tape": "4.7.0"
+  },
+  "dependencies": {
+    "got": "7.1.0"
+  },
+  "browser": {
+    "./get.js": "./browser-get.js"
   }
 }
