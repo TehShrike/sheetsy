@@ -11,6 +11,9 @@
     "test:all": "npm run test && npm run test:node && npm run test:browser",
     "build": "rollup -c"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TehShrike/sheetsy.git"
