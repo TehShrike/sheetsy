@@ -14,9 +14,7 @@ This library owes a lot to @jsoma and [Tabletop.js](https://github.com/jsoma/tab
 
 Tabletop's implementation pointed me at the endpoints to hit, and saved me a lot of investigation into the specifics of how to fetch the data from Google Sheets.
 
-Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy API support (both Tabletop.js's own API, and old IE APIs), and being composed of pure functions.
-
-Being composed of pure functions also allows this library to be more thoroughly tested.
+Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy IE and HTTP support, and being composed of pure functions, which allows this library to be more thoroughly tested.
 
 # How to set up your Google Sheet
 
@@ -106,7 +104,7 @@ Whether you format the first row as a header or not, Google Sheets will treat it
 
 It appears to strip spaces and lowercase your text.
 
-# Optional argument: `getFunction`
+## Optional argument: `getFunction`
 
 The `getSheet` and `getSheetList` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
 
@@ -116,7 +114,7 @@ You can pass in your own function if you want to try to get it working from an H
 
 Your browser bundler will need to respect the `browser` field in `package.json`.  Given that, all you need to do is `import sheetsy from 'sheetsy'` or `const sheetsy = require('sheetsy')`.
 
-# Possible additions
+# Possible future features
 
 If you find yourself needing these, open an issue with full details about your use case, or a pull request with tests.
 
