@@ -4,7 +4,7 @@
   "description": "Use your Google Sheets as a data source in the browser.  Like tabletop.js but simpler.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/test-*.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/TehShrike/sheetsy/issues"
   },
-  "homepage": "https://github.com/TehShrike/sheetsy#readme"
+  "homepage": "https://github.com/TehShrike/sheetsy#readme",
+  "devDependencies": {
+    "tape": "4.7.0"
+  }
 }
