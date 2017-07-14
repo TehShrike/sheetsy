@@ -2,17 +2,6 @@ const { buildIndexUrl, buildSheetUrl } = require('./url-builder.js')
 const defaultGet = require('./get.js')
 const entries = require('ordered-entries')
 
-const afterLastSlash = str => str.split('/').pop()
-
-const firstCapture = (regex, str) => {
-	const match = regex.exec(str)
-	return match && match[1]
-}
-
-const toss = message => {
-	throw new Error(message)
-}
-
 function getSheetList(key, get = defaultGet) {
 	return get(buildIndexUrl(key)).then(data => {
 		return data.feed.entry.map(sheetData => {
@@ -60,4 +49,15 @@ module.exports = {
 	getSheetList,
 	getSheet,
 	urlToKey
+}
+
+const afterLastSlash = str => str.split('/').pop()
+
+const firstCapture = (regex, str) => {
+	const match = regex.exec(str)
+	return match && match[1]
+}
+
+const toss = message => {
+	throw new Error(message)
 }
