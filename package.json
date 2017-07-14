@@ -28,7 +28,8 @@
     "tape": "4.7.0"
   },
   "dependencies": {
-    "got": "7.1.0"
+    "got": "7.1.0",
+    "ordered-entries": "1.0.0"
   },
   "browser": {
     "./get.js": "./browser-get.js"
