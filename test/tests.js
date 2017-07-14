@@ -38,7 +38,6 @@ module.exports = getFunction => {
 		testCases.forEach(testCase => {
 			testCase.sheetsList.forEach(sheet => {
 				t.test(`${testCase.name} - ${sheet.name}`, t => {
-					console.log('sheet id', sheet.id)
 					getSheet(testCase.key, sheet.id, getFunction).then(actualOutput => {
 						const expectedOutput = testCase.sheets[sheet.id]
 						t.deepEqual(actualOutput, expectedOutput)
