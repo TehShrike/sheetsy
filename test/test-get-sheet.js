@@ -8,7 +8,7 @@ const parseUrl = url => {
 
 const testGet = url => {
 	const { key, id } = parseUrl(url)
-	return Promise.resolve(require(`./fixture-${key}-sheet-${id}.json`))
+	return Promise.resolve(require(`./fixture/${key}-sheet-${id}.json`))
 }
 
 testCases.forEach(testCase => {

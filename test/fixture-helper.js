@@ -7,14 +7,14 @@ const testCases = require('./cases.js')
 function outputSheet(key, sheetId) {
 	httpGet(buildSheetUrl(key, sheetId)).then(body => {
 		const json = JSON.stringify(body, null, '\t')
-		fs.writeFileSync(`./fixture-${key}-sheet-${sheetId}.json`, json)
+		fs.writeFileSync(`./fixture/${key}-sheet-${sheetId}.json`, json)
 	})
 }
 
 function outputIndex(key) {
 	httpGet(buildIndexUrl(key)).then(body => {
 		const json = JSON.stringify(body, null, '\t')
-		fs.writeFileSync(`./fixture-${key}.json`, json)
+		fs.writeFileSync(`./fixture/${key}.json`, json)
 	})
 }
 
