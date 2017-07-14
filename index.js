@@ -48,7 +48,7 @@ function getSheet(key, id, get = defaultGet) {
 	})
 }
 
-function parseUrl(url) {
+function urlToKey(url) {
 	return firstCapture(/key=(.*?)(&|#|$)/, url)
 		|| firstCapture(/d\/(.*?)\/pubhtml/, url)
 		|| firstCapture(/spreadsheets\/d\/(.*?)\//, url)
@@ -59,5 +59,5 @@ function parseUrl(url) {
 module.exports = {
 	getSheetList,
 	getSheet,
-	parseUrl
+	urlToKey
 }
