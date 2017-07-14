@@ -34,14 +34,6 @@ This is what you'll do:
 2. Using the key, fetch the list of sheets
 3. With the original key and a sheet id from the list, fetch a sheet's data
 
-# HTTPS
-
-This library will only work in the browser if your site is served over HTTPS.
-
-Your site should be served over HTTPS anyway.  For local testing, use [ngrok](https://ngrok.com/) or something.
-
-Caveat: if you want to try to work around this, you can implement your own HTTP GET function.  [See below](#optional-argument-getfunction)
-
 # API
 
 ```js
