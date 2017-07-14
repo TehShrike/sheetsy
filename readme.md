@@ -100,7 +100,7 @@ It appears to strip spaces and lowercase your text.
 
 The `getSheet` and `getSheetList` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
 
-You can pass in your own function if you want to try to get it working from an HTTP site or something.  The function is expected to take the url as a string, make a GET request to that url, and return the body of the response as parsed JSON.
+You can pass in your own function if you want to try to get it working from an HTTP site or something.  The function is expected to take the url as a string, make a GET request to that url, and return a promise that resolves to the body of the response as parsed JSON.
 
 # How to use in the browser or node
 
