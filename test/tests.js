@@ -1,5 +1,5 @@
 const tape = require('tape')
-const { urlToKey, getSheet, getSheetList } = require('../index.js')
+const { urlToKey, getSheet, getSheetList } = require('../')
 
 const testCases = require('./cases.js')
 
