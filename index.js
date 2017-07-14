@@ -4,6 +4,15 @@ const entries = require('ordered-entries')
 
 const afterLastSlash = str => str.split('/').pop()
 
+const firstCapture = (regex, str) => {
+	const match = regex.exec(str)
+	return match && match[1]
+}
+
+const toss = message => {
+	throw new Error(message)
+}
+
 function getSheetsList(key, get = defaultGet) {
 	return get(buildIndexUrl(key)).then(data => {
 		return data.feed.entry.map(sheetData => {
@@ -40,20 +49,10 @@ function getSheet(key, id, get = defaultGet) {
 }
 
 function parseUrl(url) {
-	if (/key=/.test(url)) {
-		return url.match('key=(.*?)(&|#|$)')[1]
-	}
-
-	if (/pubhtml/.test(url)) {
-		return url.match('d\\/(.*?)\\/pubhtml')[1]
-	}
-
-	if (/spreadsheets\/d/.test(url)) {
-		return url.match('d\\/(.*?)\/')[1]
-	}
-
-
-	throw new Error(`No key found in ${url}`)
+	return firstCapture(/key=(.*?)(&|#|$)/, url)
+		|| firstCapture(/d\/(.*?)\/pubhtml/, url)
+		|| firstCapture(/spreadsheets\/d\/(.*?)\//, url)
+		|| toss(`No key found in ${url}`)
 }
 
 
