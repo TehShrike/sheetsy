@@ -1,6 +1,6 @@
 {
   "name": "sheetsy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use your Google Sheets as a data source in the browser.  Like tabletop.js but simpler.",
   "main": "index-node.js",
   "browser": "browser-build.js",
