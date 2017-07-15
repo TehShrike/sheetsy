@@ -31,14 +31,14 @@ Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy 
 This is what you'll do:
 
 1. Turn the URL into a key
-2. Using the key, fetch the top-level document containing a list of sheets
+2. Using the key, fetch the top-level workbook containing a list of sheets
 3. With the original key and a sheet id from the list, fetch one of the sheets to access its rows
 
 # API
 
 ```js
 const sheetsy = require('sheetsy')
-const { urlToKey, getDocument, getSheet } = sheetsy
+const { urlToKey, getWorkbook, getSheet } = sheetsy
 ```
 
 ## `key = urlToKey(url)`
@@ -53,13 +53,13 @@ const key = urlToKey(
 
 Tabletop.js notes that [some publish URLs don't work for some reason](https://github.com/jsoma/tabletop#if-your-publish-to-web-url-doesnt-work) - if you run into a published document that doesn't work for some reason, please open an issue with the link that you're using and a description of the error, I'd be interested to create some tests for those cases.
 
-## `promise = getDocument(key, [getFunction])`
+## `promise = getWorkbook(key, [getFunction])`
 
-Given a `key` string, returns a Promise that resolves to a object containing an object describing the document.
+Given a `key` string, returns a Promise that resolves to a object containing an object describing the workbook.
 
 ```js
-getDocument('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(document => {
-	document // => {
+getWorkbook('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(workbook => {
+	workbook // => {
 //		authors: [
 //			{
 //				name: 'joshduffman',
@@ -77,7 +77,7 @@ getDocument('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(document => {
 
 ## `promise = getSheet(key, id, [getFunction])`
 
-Given a `key` string and an `id` string from the document results, returns a Promise that resolves to a sheets object:
+Given a `key` string and an `id` string from the workbook results, returns a Promise that resolves to a sheets object:
 
 ```js
 getSheet('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs', '0d6').then(sheet => {
@@ -122,7 +122,7 @@ It appears to strip spaces and lowercase your text.
 
 ## Optional argument: `getFunction`
 
-The `getSheet` and `getDocument` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
+The `getSheet` and `getWorkbook` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
 
 You can pass in your own function if you want to try to get it working from an HTTP site or something.  The function is expected to take the url as a string, make a GET request to that url, and return a promise that resolves to the body of the response as parsed JSON.
 

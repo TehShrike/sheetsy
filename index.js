@@ -2,9 +2,9 @@ const { buildIndexUrl, buildSheetUrl } = require('./url-builder.js')
 const entries = require('ordered-entries')
 
 module.exports = defaultGet => {
-	function getDocument(key, get = defaultGet) {
-		return get(buildIndexUrl(key)).then(documentData => {
-			const feed = documentData.feed
+	function getWorkbook(key, get = defaultGet) {
+		return get(buildIndexUrl(key)).then(workbookData => {
+			const feed = workbookData.feed
 			const sheets = feed.entry.map(sheetData => {
 				const selfSheetUrl = sheetData.link.find(link => link.rel === 'self').href
 				return {
@@ -62,7 +62,7 @@ module.exports = defaultGet => {
 
 
 	return {
-		getDocument,
+		getWorkbook,
 		getSheet,
 		urlToKey
 	}
