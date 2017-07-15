@@ -16,85 +16,166 @@ module.exports = [
 		name: '2011',
 		url: 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE&output=html',
 		key: '0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE',
-		sheetsList: [
-			{ name: 'Sheet1', id: 'od6' }
-		],
-		sheets: {
-			od6: [
-				rowArray({ name: 'Carrot', category: 'Vegetable', healthiness: 'Adequate' }),
-				rowArray({ name: 'Pork Shoulder', category: 'Meat', healthiness: 'Questionable' }),
-				rowArray({ name: 'Bubblegum', category: 'Candy', healthiness: 'Super High' }),
+		document: {
+			authors: [
+				{
+					name: 'jonathan.soma',
+					email: 'jonathan.soma@gmail.com',
+				}
 			],
+			updated: '2015-04-07T04:45:51.207Z',
+			sheets: [
+				{ name: 'Sheet1', id: 'od6', updated: '2015-04-07T04:45:51.207Z' }
+			]
+		},
+		sheets: {
+			od6: {
+				updated: '2015-04-07T04:45:51.207Z',
+				authors: [
+					{
+						name: 'jonathan.soma',
+						email: 'jonathan.soma@gmail.com',
+					}
+				],
+				rows: [
+					rowArray({ name: 'Carrot', category: 'Vegetable', healthiness: 'Adequate' }),
+					rowArray({ name: 'Pork Shoulder', category: 'Meat', healthiness: 'Questionable' }),
+					rowArray({ name: 'Bubblegum', category: 'Candy', healthiness: 'Super High' }),
+				]
+			},
 		}
 	}, {
 		name: '2014',
 		url: 'https://docs.google.com/spreadsheets/d/1Vmj7tj64bz1cFRnbCJCAAXufonxIVOKqhZDTfPOvFTU/pubhtml',
 		key: '1Vmj7tj64bz1cFRnbCJCAAXufonxIVOKqhZDTfPOvFTU',
-		sheetsList: [
-			{ name: 'Sheet1', id: 'od6' }
-		],
-		sheets: {
-			od6: [
-				rowArray({ c: '3', d: '4' }),
-				rowArray({ c: '5', d: '6' }),
+		document: {
+			authors: [
+				{
+					name: 'daguar',
+					email: 'daguar@gmail.com',
+				}
 			],
+			updated: '2014-02-17T21:44:15.142Z',
+			sheets: [
+				{ name: 'Sheet1', id: 'od6', updated: '2014-02-17T21:44:15.142Z' }
+			]
+		},
+		sheets: {
+			od6: {
+				updated: '2014-02-17T21:44:15.142Z',
+				authors: [
+					{
+						name: 'daguar',
+						email: 'daguar@gmail.com',
+					}
+				],
+				rows: [
+					rowArray({ c: '3', d: '4' }),
+					rowArray({ c: '5', d: '6' }),
+				]
+			},
 		}
 	}, {
 		name: '2016',
 		url: 'https://docs.google.com/spreadsheets/d/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/pubhtml',
 		key: '1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc',
-		sheetsList: [
-			{ name: 'books', id: 'od6' }
-		],
-		sheets: {
-			od6: [
-				rowArray({
-					title: `The Left Hand of Darkness`,
-					author: `Ursula K. Le Guin`,
-					goodreadsrating: `4.05`,
-				}),
-				rowArray({
-					title: `Kindred`,
-					author: `Octavia Butler`,
-					goodreadsrating: `4.16`,
-				}),
-				rowArray({
-					title: `The Handmaid's Tale`,
-					author: `Margaret Atwood`,
-					goodreadsrating: `4.01`,
-				}),
-				rowArray({
-					title: `A Swiftly Tilting Planet`,
-					author: `Madeleine L'Engle`,
-					goodreadsrating: `4.12`,
-				}),
+		document: {
+			authors: [
+				{
+					name: 'jonathan.soma',
+					email: 'jonathan.soma@gmail.com',
+				}
 			],
+			updated: '2016-12-08T15:31:04.130Z',
+			sheets: [
+				{ name: 'books', id: 'od6', updated: '2016-12-08T15:31:04.130Z' }
+			]
+		},
+		sheets: {
+			od6: {
+				authors: [
+					{
+						name: 'jonathan.soma',
+						email: 'jonathan.soma@gmail.com',
+					}
+				],
+				updated: '2016-12-08T15:31:04.130Z',
+				rows: [
+					rowArray({
+						title: `The Left Hand of Darkness`,
+						author: `Ursula K. Le Guin`,
+						goodreadsrating: `4.05`,
+					}),
+					rowArray({
+						title: `Kindred`,
+						author: `Octavia Butler`,
+						goodreadsrating: `4.16`,
+					}),
+					rowArray({
+						title: `The Handmaid's Tale`,
+						author: `Margaret Atwood`,
+						goodreadsrating: `4.01`,
+					}),
+					rowArray({
+						title: `A Swiftly Tilting Planet`,
+						author: `Madeleine L'Engle`,
+						goodreadsrating: `4.12`,
+					}),
+				]
+			},
 		}
 	}, {
 		name: 'My sheetsy example',
 		url: 'https://docs.google.com/spreadsheets/d/14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs/pubhtml',
 		key: '14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs',
-		sheetsList: [
-			{ name: 'Herp', id: 'od6' },
-			{ name: 'Derp', id: 'of6b9b5' }
-		],
-		sheets: {
-			od6: [
-				rowArray({
-					firstheader: `Something's up`,
-					secondheader: `That's "cool"`,
-				}),
-				rowArray({
-					firstheader: 'a3',
-					secondheader: 'b3',
-				}, [ 'a3', 'b3', 'c3' ])
+		document: {
+			authors: [
+				{
+					name: 'joshduffman',
+					email: 'joshduffman@gmail.com',
+				}
 			],
-			of6b9b5: [
-				rowArray({
-					firstcolumninsecondsheet: `What's even going on here`,
-					secondcolumn: ``
-				})
+			updated: '2017-07-14T04:59:24.123Z',
+			sheets: [
+				{ name: 'Herp', id: 'od6', updated: '2017-07-14T04:59:24.123Z' },
+				{ name: 'Derp', id: 'of6b9b5', updated: '2017-07-14T04:59:24.123Z' }
 			]
+		},
+		sheets: {
+			od6: {
+				updated: '2017-07-14T04:59:24.123Z',
+				authors: [
+					{
+						name: 'joshduffman',
+						email: 'joshduffman@gmail.com',
+					}
+				],
+				rows: [
+					rowArray({
+						firstheader: `Something's up`,
+						secondheader: `That's "cool"`,
+					}),
+					rowArray({
+						firstheader: 'a3',
+						secondheader: 'b3',
+					}, [ 'a3', 'b3', 'c3' ])
+				]
+			},
+			of6b9b5: {
+				updated: '2017-07-14T04:59:24.123Z',
+				authors: [
+					{
+						name: 'joshduffman',
+						email: 'joshduffman@gmail.com',
+					}
+				],
+				rows: [
+					rowArray({
+						firstcolumninsecondsheet: `What's even going on here`,
+						secondcolumn: ``
+					})
+				]
+			}
 		}
 	},
 ]

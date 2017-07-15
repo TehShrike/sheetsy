@@ -6,7 +6,7 @@ Use Google Sheets as a data source for your webapps.
 
 Why write a CMS for small projects when you could just edit a spreadsheet?
 
-Works in node and the browser.  The ES5 browser build is ~1040 bytes minified/gzipped.
+Works in node and the browser.  The ES5 browser build is ~1188 bytes minified/gzipped.
 
 # Relationship to Tabletop.js
 
@@ -31,14 +31,14 @@ Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy 
 This is what you'll do:
 
 1. Turn the URL into a key
-2. Using the key, fetch the list of sheets
-3. With the original key and a sheet id from the list, fetch a sheet's data
+2. Using the key, fetch the top-level document containing a list of sheets
+3. With the original key and a sheet id from the list, fetch one of the sheets to access its rows
 
 # API
 
 ```js
 const sheetsy = require('sheetsy')
-const { urlToKey, getSheetList, getSheet } = sheetsy
+const { urlToKey, getDocument, getSheet } = sheetsy
 ```
 
 ## `key = urlToKey(url)`
@@ -53,29 +53,53 @@ const key = urlToKey(
 
 Tabletop.js notes that [some publish URLs don't work for some reason](https://github.com/jsoma/tabletop#if-your-publish-to-web-url-doesnt-work) - if you run into a published document that doesn't work for some reason, please open an issue with the link that you're using and a description of the error, I'd be interested to create some tests for those cases.
 
-## `promise = getSheetList(key, [getFunction])`
+## `promise = getDocument(key, [getFunction])`
 
-Given a `key` string, returns a Promise that resolves to an array of objects describing the sheets in the document.
+Given a `key` string, returns a Promise that resolves to a object containing an object describing the document.
 
 ```js
-getSheetList('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(sheets => {
-	sheets // => [
-	//		{ name: 'Herp', id: 'od6' },
-	//		{ name: 'Derp', id: 'of6b9b5' }
-	//	]
+getDocument('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(document => {
+	document // => {
+//		authors: [
+//			{
+//				name: 'joshduffman',
+//				email: 'joshduffman@gmail.com',
+//			}
+//		],
+//		updated: '2017-07-14T04:59:24.123Z',
+//		sheets: [
+//			{ name: 'Herp', id: 'od6', updated: '2017-07-14T04:59:24.123Z' },
+//			{ name: 'Derp', id: 'of6b9b5', updated: '2017-07-14T04:59:24.123Z' }
+//		]
+//	}
 })
 ```
 
 ## `promise = getSheet(key, id, [getFunction])`
 
-Given a `key` string and an `id` string from the sheet list results, returns a Promise that resolves to an array of rows from the sheet.
+Given a `key` string and an `id` string from the document results, returns a Promise that resolves to a sheets object:
 
 ```js
 getSheet('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs', '0d6').then(sheet => {
-	sheet // => [
-	//		[ `Something's up`, `That's "cool"` ],
-	//		[ `a3`, `b3`, `c3` ]
-	//	]
+	sheet // => {
+//		updated: '2017-07-14T04:59:24.123Z',
+//		authors: [
+//			{
+//				name: 'joshduffman',
+//				email: 'joshduffman@gmail.com',
+//			}
+//		],
+//		rows: [
+//			rowArray({
+//				firstheader: `Something's up`,
+//				secondheader: `That's "cool"`,
+//			}),
+//			rowArray({
+//				firstheader: 'a3',
+//				secondheader: 'b3',
+//			}, [ 'a3', 'b3', 'c3' ])
+//		]
+//	}
 })
 ```
 
@@ -83,7 +107,7 @@ In addition, you can also access values of a row by property name.  In this exam
 
 ```js
 getSheet('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs', '0d6').then(sheet => {
-	const firstRow = sheet[0]
+	const firstRow = sheet.rows[0]
 	firstRow.firstheader // => `Something's up`
 	firstRow.secondheader // => `That's "cool"`
 })
@@ -98,7 +122,7 @@ It appears to strip spaces and lowercase your text.
 
 ## Optional argument: `getFunction`
 
-The `getSheet` and `getSheetList` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
+The `getSheet` and `getDocument` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
 
 You can pass in your own function if you want to try to get it working from an HTTP site or something.  The function is expected to take the url as a string, make a GET request to that url, and return a promise that resolves to the body of the response as parsed JSON.
 
@@ -106,12 +130,11 @@ You can pass in your own function if you want to try to get it working from an H
 
 Your browser bundler will need to respect the `browser` field in `package.json`.  Given that, all you need to do is `import sheetsy from 'sheetsy'` or `const sheetsy = require('sheetsy')`.
 
-# Possible future features
+# Private sheets support
 
-If you find yourself needing these, open an issue with full details about your use case, or a pull request with tests.
+I'm open to the feature, but don't have need of it yet myself.
 
-- Return some other metadata with the document/sheets, such as author or last updated time
-- Handle private sheets
+If you find yourself needing private sheets, open an issue with full details about your use case, and/or a pull request with tests.
 
 # License
 
