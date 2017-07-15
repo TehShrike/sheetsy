@@ -14,6 +14,7 @@ module.exports = defaultGet => {
 			})
 
 			return {
+				name: textOf(documentData.feed.title),
 				updated: textOf(documentData.feed.updated),
 				authors: getAuthors(documentData.feed),
 				sheets,

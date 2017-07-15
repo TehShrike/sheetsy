@@ -17,6 +17,7 @@ module.exports = [
 		url: 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE&output=html',
 		key: '0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE',
 		document: {
+			name: 'Foods for Tabletop sample',
 			authors: [
 				{
 					name: 'jonathan.soma',
@@ -49,6 +50,7 @@ module.exports = [
 		url: 'https://docs.google.com/spreadsheets/d/1Vmj7tj64bz1cFRnbCJCAAXufonxIVOKqhZDTfPOvFTU/pubhtml',
 		key: '1Vmj7tj64bz1cFRnbCJCAAXufonxIVOKqhZDTfPOvFTU',
 		document: {
+			name: 'new-doc-new-gdrive',
 			authors: [
 				{
 					name: 'daguar',
@@ -80,6 +82,7 @@ module.exports = [
 		url: 'https://docs.google.com/spreadsheets/d/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/pubhtml',
 		key: '1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc',
 		document: {
+			name: 'Some books',
 			authors: [
 				{
 					name: 'jonathan.soma',
@@ -129,6 +132,7 @@ module.exports = [
 		url: 'https://docs.google.com/spreadsheets/d/14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs/pubhtml',
 		key: '14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs',
 		document: {
+			name: 'Sheetsy test',
 			authors: [
 				{
 					name: 'joshduffman',
