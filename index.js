@@ -4,7 +4,8 @@ const entries = require('ordered-entries')
 module.exports = defaultGet => {
 	function getDocument(key, get = defaultGet) {
 		return get(buildIndexUrl(key)).then(documentData => {
-			const sheets = documentData.feed.entry.map(sheetData => {
+			const feed = documentData.feed
+			const sheets = feed.entry.map(sheetData => {
 				const selfSheetUrl = sheetData.link.find(link => link.rel === 'self').href
 				return {
 					name: textOf(sheetData.title),
@@ -14,9 +15,9 @@ module.exports = defaultGet => {
 			})
 
 			return {
-				name: textOf(documentData.feed.title),
-				updated: textOf(documentData.feed.updated),
-				authors: getAuthors(documentData.feed),
+				name: textOf(feed.title),
+				updated: textOf(feed.updated),
+				authors: getAuthors(feed),
 				sheets,
 			}
 		})
@@ -24,7 +25,8 @@ module.exports = defaultGet => {
 
 	function getSheet(key, id, get = defaultGet) {
 		return get(buildSheetUrl(key, id)).then(sheetData => {
-			const rows = sheetData.feed.entry.map(entry => {
+			const feed = sheetData.feed
+			const rows = feed.entry.map(entry => {
 				const originalCellKeysAndValues = entries(entry)
 					.filter(([ key ]) => /^gsx\$/.test(key))
 					.map(([ key, value ]) => ({
@@ -44,8 +46,8 @@ module.exports = defaultGet => {
 			})
 
 			return {
-				updated: textOf(sheetData.feed.updated),
-				authors: getAuthors(sheetData.feed),
+				updated: textOf(feed.updated),
+				authors: getAuthors(feed),
 				rows,
 			}
 		})
