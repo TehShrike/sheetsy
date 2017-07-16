@@ -16,9 +16,9 @@ Tabletop's implementation pointed me at the endpoints to hit, and saved me a lot
 
 Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy IE and HTTP support, and being composed of pure functions, which allows this library to be more thoroughly tested.
 
-# How to set up your Google Sheet
+# How to set up your Google Spreadheet
 
-1. Create a [Google Sheet](https://docs.google.com/spreadsheets/)
+1. Create a spreadsheet with [Google Sheets](https://docs.google.com/spreadsheets/)
 2. Navigate to the "File" menu
 3. Click "Publish to the Web"
 	- It should default to "Entire Document" + "Web page", which is what you want.
@@ -26,7 +26,7 @@ Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy 
 5. Click "Publish"
 6. Copy the URL
 
-# Using a published Google Sheet as a data source
+# Using a published Google Spreadsheet as a data source
 
 This is what you'll do:
 
