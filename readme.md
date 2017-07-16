@@ -16,7 +16,7 @@ Tabletop's implementation pointed me at the endpoints to hit, and saved me a lot
 
 Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy IE and HTTP support, and being composed of pure functions, which allows this library to be more thoroughly tested.
 
-# How to set up your Google Spreadheet
+# How to set up your Google Spreadsheet
 
 1. Create a spreadsheet with [Google Sheets](https://docs.google.com/spreadsheets/)
 2. Navigate to the "File" menu
