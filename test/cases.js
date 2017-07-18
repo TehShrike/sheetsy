@@ -31,6 +31,7 @@ module.exports = [
 		},
 		sheets: {
 			od6: {
+				name: 'Sheet1',
 				updated: '2015-04-07T04:45:51.207Z',
 				authors: [
 					{
@@ -64,6 +65,7 @@ module.exports = [
 		},
 		sheets: {
 			od6: {
+				name: 'Sheet1',
 				updated: '2014-02-17T21:44:15.142Z',
 				authors: [
 					{
@@ -96,6 +98,7 @@ module.exports = [
 		},
 		sheets: {
 			od6: {
+				name: 'books',
 				authors: [
 					{
 						name: 'jonathan.soma',
@@ -147,6 +150,7 @@ module.exports = [
 		},
 		sheets: {
 			od6: {
+				name: 'Herp',
 				updated: '2017-07-14T04:59:24.123Z',
 				authors: [
 					{
@@ -166,6 +170,7 @@ module.exports = [
 				]
 			},
 			of6b9b5: {
+				name: 'Derp',
 				updated: '2017-07-14T04:59:24.123Z',
 				authors: [
 					{

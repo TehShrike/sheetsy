@@ -46,6 +46,7 @@ module.exports = defaultGet => {
 			})
 
 			return {
+				name: textOf(feed.title),
 				updated: textOf(feed.updated),
 				authors: getAuthors(feed),
 				rows,

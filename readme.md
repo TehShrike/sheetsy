@@ -6,7 +6,7 @@ Use Google Sheets as a data source for your webapps.
 
 Why write a CMS for small projects when you could just edit a spreadsheet?
 
-Works in node and the browser.  The ES5 browser build is ~1194 bytes minified/gzipped.
+Works in node and the browser.  The ES5 browser build is ~1195 bytes minified/gzipped.
 
 # Relationship to Tabletop.js
 
@@ -60,6 +60,7 @@ Given a `key` string, returns a Promise that resolves to a object containing an 
 ```js
 getWorkbook('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(workbook => {
 	workbook // => {
+//		name: 'Sheetsy test',
 //		authors: [
 //			{
 //				name: 'joshduffman',
@@ -82,6 +83,7 @@ Given a `key` string and an `id` string from the workbook results, returns a Pro
 ```js
 getSheet('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs', '0d6').then(sheet => {
 	sheet // => {
+//		name: 'Herp,'
 //		updated: '2017-07-14T04:59:24.123Z',
 //		authors: [
 //			{
