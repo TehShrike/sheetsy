@@ -2,31 +2,41 @@ const { buildIndexUrl, buildSheetUrl } = require('./url-builder.js')
 const entries = require('ordered-entries')
 
 module.exports = defaultGet => {
-	function getSheetList(key, get = defaultGet) {
-		return get(buildIndexUrl(key)).then(data => {
-			return data.feed.entry.map(sheetData => {
-				const lastSheetUrl = sheetData.link.find(link => link.rel === 'self').href
+	function getWorkbook(key, get = defaultGet) {
+		return get(buildIndexUrl(key)).then(workbookData => {
+			const feed = workbookData.feed
+			const sheets = feed.entry.map(sheetData => {
+				const selfSheetUrl = sheetData.link.find(link => link.rel === 'self').href
 				return {
-					name: sheetData.title['$t'],
-					id: afterLastSlash(lastSheetUrl)
+					name: textOf(sheetData.title),
+					id: afterLastSlash(selfSheetUrl),
+					updated: textOf(sheetData.updated),
 				}
 			})
+
+			return {
+				name: textOf(feed.title),
+				updated: textOf(feed.updated),
+				authors: getAuthors(feed),
+				sheets,
+			}
 		})
 	}
 
 	function getSheet(key, id, get = defaultGet) {
-		return get(buildSheetUrl(key, id)).then(data => {
-			return data.feed.entry.map(entry => {
-				const originalValues = entries(entry)
+		return get(buildSheetUrl(key, id)).then(sheetData => {
+			const feed = sheetData.feed
+			const rows = feed.entry.map(entry => {
+				const originalCellKeysAndValues = entries(entry)
 					.filter(([ key ]) => /^gsx\$/.test(key))
 					.map(([ key, value ]) => ({
 						key: key.replace('gsx$', ''),
-						value: value['$t']
+						value: textOf(value)
 					}))
 
-				const array = originalValues.map(({ value }) => value)
+				const array = originalCellKeysAndValues.map(({ value }) => value)
 
-				originalValues
+				originalCellKeysAndValues
 					.filter(({ key }) => /^[^_]/.test(key))
 					.forEach(({ key, value }) => {
 						array[key] = value
@@ -34,6 +44,12 @@ module.exports = defaultGet => {
 
 				return array
 			})
+
+			return {
+				updated: textOf(feed.updated),
+				authors: getAuthors(feed),
+				rows,
+			}
 		})
 	}
 
@@ -46,11 +62,18 @@ module.exports = defaultGet => {
 
 
 	return {
-		getSheetList,
+		getWorkbook,
 		getSheet,
 		urlToKey
 	}
 }
+
+const textOf = field => field['$t']
+
+const getAuthors = data => data.author.map(({ name, email }) => ({
+	name: textOf(name),
+	email: textOf(email),
+}))
 
 const afterLastSlash = str => str.split('/').pop()
 
