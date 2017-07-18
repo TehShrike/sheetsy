@@ -53,7 +53,7 @@ const key = urlToKey(
 
 Tabletop.js notes that [some publish URLs don't work for some reason](https://github.com/jsoma/tabletop#if-your-publish-to-web-url-doesnt-work) - if you run into a published document that doesn't work for some reason, please open an issue with the link that you're using and a description of the error, I'd be interested to create some tests for those cases.
 
-## `promise = getWorkbook(key, [getFunction])`
+## `promise = getWorkbook(key, [httpGet])`
 
 Given a `key` string, returns a Promise that resolves to a object containing an object describing the workbook.
 
@@ -76,7 +76,7 @@ getWorkbook('14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs').then(workbook => {
 })
 ```
 
-## `promise = getSheet(key, id, [getFunction])`
+## `promise = getSheet(key, id, [httpGet])`
 
 Given a `key` string and an `id` string from the workbook results, returns a Promise that resolves to a sheets object:
 
@@ -122,11 +122,13 @@ Whether you format the first row as a header or not, Google Sheets will treat it
 
 It appears to strip spaces and lowercase your text.
 
-## Optional argument: `getFunction`
+## Optional argument: `httpGet`
 
-The `getSheet` and `getWorkbook` functions take an optional getter function.  This is automatically given a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
+The `getSheet` and `getWorkbook` functions take as an optional argument a function that takes a url and return a promise that resolves to the response body.
 
-You can pass in your own function if you want to try to get it working from an HTTP site or something.  The function is expected to take the url as a string, make a GET request to that url, and return a promise that resolves to the body of the response as parsed JSON.
+This defaults to a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
+
+You can pass in your own function if you want to try to get it working from with old IE or restrictive CORS settings or what-have-you.
 
 # How to use in the browser or node
 
