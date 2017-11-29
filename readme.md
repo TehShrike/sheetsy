@@ -134,12 +134,6 @@ You can pass in your own function if you want to try to get it working from with
 
 Your browser bundler will need to respect the `browser` field in `package.json`.  Given that, all you need to do is `import sheetsy from 'sheetsy'` or `const sheetsy = require('sheetsy')`.
 
-# Private sheets support
-
-I'm open to the feature, but don't have need of it yet myself.
-
-If you find yourself needing private sheets, open an issue with full details about your use case, and/or a pull request with tests.
-
 # License
 
 [WTFPL](http://wtfpl2.com)
