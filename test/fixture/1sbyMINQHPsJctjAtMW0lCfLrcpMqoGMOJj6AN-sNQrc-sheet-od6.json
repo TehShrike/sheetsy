@@ -9,7 +9,7 @@
 			"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values"
 		},
 		"updated": {
-			"$t": "2016-12-08T15:31:04.130Z"
+			"$t": "2017-09-07T20:06:40.466Z"
 		},
 		"category": [
 			{
@@ -65,7 +65,7 @@
 					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cokwr"
 				},
 				"updated": {
-					"$t": "2016-12-08T15:31:04.130Z"
+					"$t": "2017-09-07T20:06:40.466Z"
 				},
 				"category": [
 					{
@@ -79,7 +79,7 @@
 				},
 				"content": {
 					"type": "text",
-					"$t": "author: Ursula K. Le Guin, goodreadsrating: 4.05"
+					"$t": "author: Ursula K. Le Guin, goodreadsrating: 4.05, onamazon: 8.75"
 				},
 				"link": [
 					{
@@ -96,6 +96,9 @@
 				},
 				"gsx$goodreadsrating": {
 					"$t": "4.05"
+				},
+				"gsx$onamazon": {
+					"$t": "8.75"
 				}
 			},
 			{
@@ -103,7 +106,7 @@
 					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cpzh4"
 				},
 				"updated": {
-					"$t": "2016-12-08T15:31:04.130Z"
+					"$t": "2017-09-07T20:06:40.466Z"
 				},
 				"category": [
 					{
@@ -117,7 +120,7 @@
 				},
 				"content": {
 					"type": "text",
-					"$t": "author: Octavia Butler, goodreadsrating: 4.16"
+					"$t": "author: Octavia Butler, goodreadsrating: 4.16, onamazon: 9.04"
 				},
 				"link": [
 					{
@@ -134,6 +137,9 @@
 				},
 				"gsx$goodreadsrating": {
 					"$t": "4.16"
+				},
+				"gsx$onamazon": {
+					"$t": "9.04"
 				}
 			},
 			{
@@ -141,7 +147,7 @@
 					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/cre1l"
 				},
 				"updated": {
-					"$t": "2016-12-08T15:31:04.130Z"
+					"$t": "2017-09-07T20:06:40.466Z"
 				},
 				"category": [
 					{
@@ -155,7 +161,7 @@
 				},
 				"content": {
 					"type": "text",
-					"$t": "author: Margaret Atwood, goodreadsrating: 4.01"
+					"$t": "author: Margaret Atwood, goodreadsrating: 4.01, onamazon: 9.57"
 				},
 				"link": [
 					{
@@ -172,6 +178,9 @@
 				},
 				"gsx$goodreadsrating": {
 					"$t": "4.01"
+				},
+				"gsx$onamazon": {
+					"$t": "9.57"
 				}
 			},
 			{
@@ -179,7 +188,7 @@
 					"$t": "https://spreadsheets.google.com/feeds/list/1sbyMINQHPsJctjAtMW0lCfLrcpMqoGMOJj6AN-sNQrc/od6/public/values/chk2m"
 				},
 				"updated": {
-					"$t": "2016-12-08T15:31:04.130Z"
+					"$t": "2017-09-07T20:06:40.466Z"
 				},
 				"category": [
 					{
@@ -193,7 +202,7 @@
 				},
 				"content": {
 					"type": "text",
-					"$t": "author: Madeleine L'Engle, goodreadsrating: 4.12"
+					"$t": "author: Madeleine L'Engle, goodreadsrating: 4.12, onamazon: 6.8"
 				},
 				"link": [
 					{
@@ -210,6 +219,9 @@
 				},
 				"gsx$goodreadsrating": {
 					"$t": "4.12"
+				},
+				"gsx$onamazon": {
+					"$t": "6.8"
 				}
 			}
 		]
