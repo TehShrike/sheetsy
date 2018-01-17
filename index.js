@@ -1,12 +1,12 @@
-const { buildIndexUrl, buildSheetUrl } = require('./url-builder.js')
-const entries = require('ordered-entries')
+const { buildIndexUrl, buildSheetUrl } = require(`./url-builder.js`)
+const entries = require(`ordered-entries`)
 
 module.exports = defaultGet => {
 	function getWorkbook(key, get = defaultGet) {
 		return get(buildIndexUrl(key)).then(workbookData => {
 			const feed = workbookData.feed
 			const sheets = feed.entry.map(sheetData => {
-				const selfSheetUrl = sheetData.link.find(link => link.rel === 'self').href
+				const selfSheetUrl = sheetData.link.find(link => link.rel === `self`).href
 				return {
 					name: textOf(sheetData.title),
 					id: afterLastSlash(selfSheetUrl),
@@ -30,8 +30,8 @@ module.exports = defaultGet => {
 				const originalCellKeysAndValues = entries(entry)
 					.filter(([ key ]) => /^gsx\$/.test(key))
 					.map(([ key, value ]) => ({
-						key: key.replace('gsx$', ''),
-						value: textOf(value)
+						key: key.replace(`gsx$`, ``),
+						value: textOf(value),
 					}))
 
 				const array = originalCellKeysAndValues.map(({ value }) => value)
@@ -58,25 +58,25 @@ module.exports = defaultGet => {
 		return firstCapture(/key=(.*?)(&|#|$)/, url)
 			|| firstCapture(/d\/(.*?)\/pubhtml/, url)
 			|| firstCapture(/spreadsheets\/d\/(.*?)\//, url)
-			|| toss(`No key found in ${url}`)
+			|| toss(`No key found in ${ url }`)
 	}
 
 
 	return {
 		getWorkbook,
 		getSheet,
-		urlToKey
+		urlToKey,
 	}
 }
 
-const textOf = field => field['$t']
+const textOf = field => field.$t
 
 const getAuthors = data => data.author.map(({ name, email }) => ({
 	name: textOf(name),
 	email: textOf(email),
 }))
 
-const afterLastSlash = str => str.split('/').pop()
+const afterLastSlash = str => str.split(`/`).pop()
 
 const firstCapture = (regex, str) => {
 	const match = regex.exec(str)
