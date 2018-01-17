@@ -1,5 +1,5 @@
-const { buildIndexUrl, buildSheetUrl } = require(`./url-builder.js`)
-const entries = require(`ordered-entries`)
+const { buildIndexUrl, buildSheetUrl } = require('./url-builder.js')
+const entries = require('ordered-entries')
 
 module.exports = defaultGet => {
 	function getWorkbook(key, get = defaultGet) {

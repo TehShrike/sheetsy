@@ -10,7 +10,7 @@
     "test:browser": "npm run build && browserify test/test-without-fixtures.js | tape-run",
     "test:all": "npm run test && npm run test:node && npm run test:browser",
     "build": "rollup -c",
-    "size": "uglifyjs browser-build.js -mc | gzip-size --raw"
+    "size": "uglifyjs browser-build.js --compress --mangle | gzip-size --raw"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -36,6 +36,7 @@
   "devDependencies": {
     "babel-plugin-external-helpers": "6.22.0",
     "babel-preset-env": "1.6.1",
+    "basic-xhr": "^1.0.0",
     "browser-run": "3.5.0",
     "browserify": "14.4.0",
     "rollup": "0.54.1",
