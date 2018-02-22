@@ -1,6 +1,6 @@
 {
   "name": "sheetsy",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Use your Google Sheets as a data source in the browser, avoid writing a CMS back-end",
   "main": "index-node.js",
   "browser": "browser-build.js",
