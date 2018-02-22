@@ -1,4 +1,4 @@
-const createRequestFunction = require('basic-xhr')
-const createApi = require('./index.js')
+const createRequestFunction = require(`basic-xhr`)
+const createApi = require(`./index.js`)
 
 module.exports = createApi(createRequestFunction())

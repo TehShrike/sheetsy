@@ -2,31 +2,31 @@ import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
 
-const pkg = require('./package.json')
+const pkg = require(`./package.json`)
 
 export default {
-	entry: 'index-browser.js',
-	moduleName: 'sheetsy',
+	entry: `index-browser.js`,
+	moduleName: `sheetsy`,
 	plugins: [
 		commonjs(),
 		resolve(),
 		babel({
-			exclude: 'node_modules/**',
+			exclude: `node_modules/**`,
 			babelrc: false,
 			presets: [
 				[
-					'env',
+					`env`,
 					{
-						modules: false
-					}
-				]
+						modules: false,
+					},
+				],
 			],
 			plugins: [
-				'external-helpers'
-			]
+				`external-helpers`,
+			],
 		}),
 	],
 	targets: [
-    { dest: pkg.browser, format: 'cjs' }
-	]
+		{ dest: pkg.browser, format: `cjs` },
+	],
 }
