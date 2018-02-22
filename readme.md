@@ -24,7 +24,17 @@ Sheetsy is much simpler than Tabletop, by virtue of doing less, avoiding legacy 
 	- It should default to "Entire Document" + "Web page", which is what you want.
 	- The defaults should be fine for "Published content & settings" as well - for maximum easiness, you'll want to "Automatically republish when changes are made".
 5. Click "Publish"
-6. Copy the URL
+6. Close the "Publish to the web" dialog
+7. Click the blue "Share" button at the top-right
+8. If you want to make it slightly harder for people to find your spreadsheet:
+	1. Click "advanced" at the bottom-right of the "Share" dialog
+	2. Under "Who has access", click "Change"
+	3. Select "On - Anyone with the link"
+	4. Click "Save"
+9. Copy the "Link to share"
+
+That URL is the one you'll use to load content from your page.
+
 
 # Using a published Google Spreadsheet as a data source
 
@@ -50,8 +60,6 @@ const key = urlToKey(
 	'https://docs.google.com/spreadsheets/d/14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs/pubhtml'
 ) // => '14uk6kljx-tpGJeObmi22DkAyVRFK5Z1qKmSXy1ewuHs'
 ```
-
-Tabletop.js notes that [some publish URLs don't work for some reason](https://github.com/jsoma/tabletop#if-your-publish-to-web-url-doesnt-work) - if you run into a published document that doesn't work for some reason, please open an issue with the link that you're using and a description of the error, I'd be interested to create some tests for those cases.
 
 ## `promise = getWorkbook(key, [httpGet])`
 
