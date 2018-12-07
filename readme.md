@@ -1,4 +1,4 @@
-Use Google Sheets as a data source for your webapps.
+Use Google Sheets as a data source for your webapps.  No need to use the mail Google API or OAuth.
 
 1. Create a spreadsheet
 2. Create a webapp that points at that spreadsheet
