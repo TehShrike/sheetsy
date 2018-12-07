@@ -1,3 +1,7 @@
+# 2.1.4
+
+- Documentation: tweak the tagline.  [commit](https://github.com/TehShrike/sheetsy/commit/463312985227d3f171a08720c1a6ef0f2e3af27d)
+
 # 2.1.3
 
 - Documentation: update instructions for getting the spreadsheet URL.  [commit](https://github.com/TehShrike/sheetsy/commit/d9051f94bcc0f0b1ae5d98c3a78c90dba061b042)
