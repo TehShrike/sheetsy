@@ -27,7 +27,7 @@ module.exports = defaultGet => {
 		return get(buildSheetUrl(key, id)).then(sheetData => {
 			const feed = sheetData.feed
 			if (feed.entry === undefined) feed.entry = [];
-			const rows = feed.entry.map(entry => {
+			const rows = (feed.entry || []).map(entry => {
 				const originalCellKeysAndValues = entries(entry)
 					.filter(([ key ]) => /^gsx\$/.test(key))
 					.map(([ key, value ]) => ({
