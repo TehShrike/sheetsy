@@ -1,3 +1,7 @@
+# 2.1.5
+
+- Fix: an error that would be thrown if you tried to load a sheet without any rows.  [pull request](https://github.com/TehShrike/sheetsy/pull/4)
+
 # 2.1.4
 
 - Documentation: tweak the tagline.  [commit](https://github.com/TehShrike/sheetsy/commit/463312985227d3f171a08720c1a6ef0f2e3af27d)
