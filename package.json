@@ -1,6 +1,6 @@
 {
   "name": "sheetsy",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Use Google Sheets as a data source in the browser without OAuth",
   "main": "index-node.js",
   "browser": "browser-build.js",
