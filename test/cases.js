@@ -218,10 +218,10 @@ module.exports = [
 					},
 				],
 				rows: [
-					{
-						firstcolumninsecondsheet: `Ref 1`,
-						secondcolumn: `text 1`,
-					},
+					[
+						`Ref 1`,
+						`text 1`,
+					],
 				],
 			},
 			ob0rp6n: {
