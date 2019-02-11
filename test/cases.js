@@ -217,12 +217,7 @@ module.exports = [
 						email: `ejsisgreat@gmail.com`,
 					},
 				],
-				rows: [
-					[
-						`Ref 1`,
-						`text 1`,
-					],
-				],
+				rows: [],
 			},
 			ob0rp6n: {
 				name: `No header`,
