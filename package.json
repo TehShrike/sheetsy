@@ -10,7 +10,7 @@
     "test:browser": "npm run build && browserify test/test-without-fixtures.js | tape-run",
     "test:all": "npm run test && npm run test:node && npm run test:browser",
     "build": "rollup -c",
-    "size": "uglifyjs browser-build.js --compress --mangle | gzip-size --raw"
+    "size": "npm run build && npx uglify-js browser-build.js --compress --mangle | npx gzip-size-cli --raw"
   },
   "engines": {
     "node": ">=6.0.0"
