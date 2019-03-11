@@ -27,6 +27,7 @@ export default {
 		}),
 	],
 	targets: [
-		{ dest: pkg.browser, format: `cjs` },
+		{ dest: pkg.browser, format: `cjs`, exports: `named` },
+		{ dest: pkg.module, format: `es`, exports: `named` },
 	],
 }

@@ -4,6 +4,7 @@
   "description": "Use Google Sheets as a data source in the browser without OAuth",
   "main": "index-node.js",
   "browser": "browser-build.js",
+  "module": "browser-esm-build.js",
   "scripts": {
     "test": "tape test/test-with-fixtures.js",
     "test:node": "node test/test-without-fixtures.js",
