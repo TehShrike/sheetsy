@@ -5,8 +5,20 @@ import babel from 'rollup-plugin-babel'
 const pkg = require(`./package.json`)
 
 export default {
-	entry: `index-browser.js`,
-	moduleName: `sheetsy`,
+	input: `index-browser.js`,
+	output: [
+		{
+			name: `sheetsy`,
+			file: pkg.browser,
+			format: `cjs`,
+			exports: `named`,
+		}, {
+			name: `sheetsy`,
+			file: pkg.module,
+			format: `es`,
+			exports: `named`,
+		},
+	],
 	plugins: [
 		commonjs(),
 		resolve(),
@@ -25,9 +37,5 @@ export default {
 				`external-helpers`,
 			],
 		}),
-	],
-	targets: [
-		{ dest: pkg.browser, format: `cjs`, exports: `named` },
-		{ dest: pkg.module, format: `es`, exports: `named` },
 	],
 }
