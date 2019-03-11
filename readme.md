@@ -6,7 +6,7 @@ Use Google Sheets as a data source for your webapps.  No need to use the mail Go
 
 Why write a CMS for small projects when you could just edit a spreadsheet?
 
-Works in node and the browser.  The ES5 browser build is ~1303 bytes minified/gzipped.
+Works in node and the browser.  The ES5 browser build is ~1310 bytes minified/gzipped.
 
 # Relationship to Tabletop.js
 

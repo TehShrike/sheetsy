@@ -1,8 +1,8 @@
 const { buildIndexUrl, buildSheetUrl } = require(`./url-builder.js`)
 const entries = require(`ordered-entries`)
 
-module.exports = defaultGet => {
-	function getWorkbook(key, get = defaultGet) {
+module.exports = defaultGet => ({
+	getWorkbook(key, get = defaultGet) {
 		return get(buildIndexUrl(key)).then(workbookData => {
 			const feed = workbookData.feed
 			const sheets = feed.entry.map(sheetData => {
@@ -21,9 +21,8 @@ module.exports = defaultGet => {
 				sheets,
 			}
 		})
-	}
-
-	function getSheet(key, id, get = defaultGet) {
+	},
+	getSheet(key, id, get = defaultGet) {
 		return get(buildSheetUrl(key, id)).then(sheetData => {
 			const feed = sheetData.feed
 			const rows = (feed.entry || []).map(entry => {
@@ -52,22 +51,14 @@ module.exports = defaultGet => {
 				rows,
 			}
 		})
-	}
-
-	function urlToKey(url) {
+	},
+	urlToKey(url) {
 		return firstCapture(/key=(.*?)(&|#|$)/, url)
 			|| firstCapture(/d\/(.*?)\/pubhtml/, url)
 			|| firstCapture(/spreadsheets\/d\/(.*?)\//, url)
 			|| toss(`No key found in ${ url }`)
 	}
-
-
-	return {
-		getWorkbook,
-		getSheet,
-		urlToKey,
-	}
-}
+})
 
 const textOf = field => field.$t
 
