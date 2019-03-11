@@ -1,3 +1,7 @@
+# 2.2.0
+
+- Feature: exposed an ESM build for browsers.  [commit](https://github.com/TehShrike/sheetsy/commit/9fdb04921597a88ea6f7568f3afba4c0290ff9a4)
+
 # 2.1.5
 
 - Fix: an error that would be thrown if you tried to load a sheet without any rows.  [pull request](https://github.com/TehShrike/sheetsy/pull/4)
