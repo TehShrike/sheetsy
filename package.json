@@ -36,7 +36,7 @@
   "homepage": "https://github.com/TehShrike/sheetsy#readme",
   "devDependencies": {
     "babel-plugin-external-helpers": "6.22.0",
-    "babel-preset-env": "1.6.1",
+    "babel-preset-env": "^1.7.0",
     "basic-xhr": "~1.0.0",
     "browserify": "16.2.3",
     "rollup": "0.54.1",
