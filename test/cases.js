@@ -22,15 +22,15 @@ module.exports = [
 					email: `jonathan.soma@gmail.com`,
 				},
 			],
-			updated: `2015-04-07T04:45:51.207Z`,
+			updated: `2019-08-29T18:39:42.756Z`,
 			sheets: [
-				{ name: `Sheet1`, id: `od6`, updated: `2015-04-07T04:45:51.207Z` },
+				{ name: `Sheet1`, id: `od6`, updated: `2019-08-29T18:39:42.756Z` },
 			],
 		},
 		sheets: {
 			od6: {
 				name: `Sheet1`,
-				updated: `2015-04-07T04:45:51.207Z`,
+				updated: `2019-08-29T18:39:42.763Z`,
 				authors: [
 					{
 						name: `jonathan.soma`,
@@ -56,15 +56,15 @@ module.exports = [
 					email: `daguar@gmail.com`,
 				},
 			],
-			updated: `2014-02-17T21:44:15.142Z`,
+			updated: `2019-08-29T18:39:42.714Z`,
 			sheets: [
-				{ name: `Sheet1`, id: `od6`, updated: `2014-02-17T21:44:15.142Z` },
+				{ name: `Sheet1`, id: `od6`, updated: `2019-08-29T18:39:42.714Z` },
 			],
 		},
 		sheets: {
 			od6: {
 				name: `Sheet1`,
-				updated: `2014-02-17T21:44:15.142Z`,
+				updated: `2019-08-29T18:39:42.782Z`,
 				authors: [
 					{
 						name: `daguar`,
@@ -89,9 +89,9 @@ module.exports = [
 					email: `jonathan.soma@gmail.com`,
 				},
 			],
-			updated: `2017-09-07T20:06:40.466Z`,
+			updated: `2019-08-29T18:39:42.702Z`,
 			sheets: [
-				{ name: `books`, id: `od6`, updated: `2017-09-07T20:06:40.466Z` },
+				{ name: `books`, id: `od6`, updated: `2019-08-29T18:39:42.702Z` },
 			],
 		},
 		sheets: {
@@ -103,7 +103,7 @@ module.exports = [
 						email: `jonathan.soma@gmail.com`,
 					},
 				],
-				updated: `2017-09-07T20:06:40.466Z`,
+				updated: `2019-08-29T18:39:42.746Z`,
 				rows: [
 					rowArray({
 						title: `The Left Hand of Darkness`,
@@ -144,16 +144,16 @@ module.exports = [
 					email: `joshduffman@gmail.com`,
 				},
 			],
-			updated: `2017-07-14T04:59:24.123Z`,
+			updated: `2019-08-29T18:39:42.742Z`,
 			sheets: [
-				{ name: `Herp`, id: `od6`, updated: `2017-07-14T04:59:24.123Z` },
-				{ name: `Derp`, id: `of6b9b5`, updated: `2017-07-14T04:59:24.123Z` },
+				{ name: `Herp`, id: `od6`, updated: `2019-08-29T18:39:42.742Z` },
+				{ name: `Derp`, id: `of6b9b5`, updated: `2019-08-29T18:39:42.742Z` },
 			],
 		},
 		sheets: {
 			od6: {
 				name: `Herp`,
-				updated: `2017-07-14T04:59:24.123Z`,
+				updated: `2019-08-29T18:39:42.749Z`,
 				authors: [
 					{
 						name: `joshduffman`,
@@ -173,7 +173,7 @@ module.exports = [
 			},
 			of6b9b5: {
 				name: `Derp`,
-				updated: `2017-07-14T04:59:24.123Z`,
+				updated: `2019-08-29T18:39:42.728Z`,
 				authors: [
 					{
 						name: `joshduffman`,
@@ -201,16 +201,16 @@ module.exports = [
 					email: `ejsisgreat@gmail.com`,
 				},
 			],
-			updated: `2019-02-11T16:29:42.268Z`,
+			updated: `2019-08-29T18:39:42.781Z`,
 			sheets: [
-				{ name: `No entries`, id: `od6`, updated: `2019-02-11T16:29:42.268Z` },
-				{ name: `No header`, id: `ob0rp6n`, updated: `2019-02-11T16:29:42.268Z` },
+				{ name: `No entries`, id: `od6`, updated: `2019-08-29T18:39:42.781Z` },
+				{ name: `No header`, id: `ob0rp6n`, updated: `2019-08-29T18:39:42.781Z` },
 			],
 		},
 		sheets: {
 			od6: {
 				name: `No entries`,
-				updated: `2019-02-11T16:29:42.268Z`,
+				updated: `2019-08-29T18:39:42.788Z`,
 				authors: [
 					{
 						name: `ejsisgreat`,
@@ -221,7 +221,7 @@ module.exports = [
 			},
 			ob0rp6n: {
 				name: `No header`,
-				updated: `2019-02-11T16:29:42.268Z`,
+				updated: `2019-08-29T18:39:42.844Z`,
 				authors: [
 					{
 						name: `ejsisgreat`,
@@ -232,9 +232,9 @@ module.exports = [
 					[
 						`Ref 1`,
 						`text 1`,
-					]
+					],
 				],
 			},
 		},
-	}
+	},
 ]
