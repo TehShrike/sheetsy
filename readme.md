@@ -140,7 +140,7 @@ The `getSheet` and `getWorkbook` functions take as an optional argument a functi
 
 This defaults to a function backed by `XMLHttpRequest` in the browser, or the [`got`](https://github.com/sindresorhus/got) module in node.
 
-You can pass in your own function if you want to try to get it working from with old IE or restrictive CORS settings or what-have-you.
+You can pass in your own function if you want to try to get it working with old IE or restrictive CORS settings or what-have-you.
 
 # How to use in the browser or node
 
